@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Emirates Electricity Agency - Bill generation </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="Emirates Electricity Agency - Bill Generation.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+    <link rel="icon" href="faviconCompProj.ico">
+  </head>
+  <body>
+    <div id="normalViewOutputs" class="regular">
+      <hr>
+      <h3 id="headingg" class="heading"> EMIRATES ELECTRICITY AGENCY </h3>
+      <a href="https://www.dewa.gov.ae/en">
+      <img src="electricityCompProj.jpeg" alt="Electricity Image" class="electricityImg">
+      <img src="Logo EEA comp proj.png" alt="Logo of EEA" class="logo">
+      </a>
+      <h4 class="catchPhrase"> With Great Power, Comes Great Responsibility! </h4>
+      <hr>
+      <div class="mainOutputs">
+        <h2 class="mainLatestOP"> Latest Customer's Details: </h2>
+      <table>
+        <tr>
+          <td>
+            <h4>Code </h4>
+          </td>
+          <td><p>:</p></td>
+          <td>
+            <p class="valuePrint" id="cusCodePrint">...</p>
+          </td>
+        </tr>
+        <tr>
+          <td><hr class="midInfoHR"></td>
+        </tr>
+        <tr>
+            <!-- <h4 class="mainOutputs" id="cusNamePrint"></h4> -->
+          <td>
+            <h4>Name </h4>
+          </td>
+          <td><p>:</p></td>
+          <td>
+            <p class="valuePrint" id="cusNamePrint">...</p>
+          </td>
+        </tr>
+        <tr>
+          <td><hr class="midInfoHR"></td>
+        </tr>
+        <tr>
+            <!-- <h4 class="mainOutputs" id="addressPrint"></h4> -->
+            <td>
+              <h4>Address </h4>
+            </td>
+            <td><p>:</p></td>
+            <td>
+              <p class="valuePrint" id="addressPrint">...</p>
+            </td>
+        </tr>
+      </table>
+        <hr>
+      <table>
+        <tr>
+            <td>
+              <h4>Previous reading </h4>
+            </td>
+            <td><p>:</p></td>
+            <td>
+              <p class="valuePrint" id="prevReadPrint">...</p>
+            </td>
+        </tr>
+        <tr>
+          <td><hr class="midInfoHR"></td>
+        </tr>
+        <tr>
+            <td>
+              <h4>Current reading </h4>
+            </td>
+            <td><p>:</p></td>
+            <td>
+              <p class="valuePrint" id="curReadPrint">...</p>
+            </td>
+        </tr>
+        <tr>
+          <td><hr class="midInfoHR"></td>
+        </tr>
+        <tr>
+            <td>
+              <h4> Units Consumed </h4>
+            </td>
+            <td><p>:</p></td>
+            <td>
+              <p class="valuePrint" id="unitConsumePrint">...</p>
+            </td>
+        </tr>
+        <tr>
+          <td><hr class="midInfoHR"></td>
+        </tr>
+        <tr>
+            <td>
+              <h4> Units price </h4>
+            </td>
+            <td><p>:</p></td>
+            <td>
+              <p class="valuePrint" id="unitPricePrint">...</p>
+            </td>
+        </tr>
+        <tr>
+          <td><hr class="midInfoHR"></td>
+        </tr>
+        <tr>
+            <td>
+              <h4> Amount </h4>
+            </td>
+            <td><p>:</p></td>
+            <td>
+              <p class="valuePrint" id="amountPrint">...</p>
+            </td>
+        </tr>
+      </table>
+              <hr>
+      <table>
+        <tr>
+            <td>
+              <h4> Admin Charges </h4>
+            </td>
+            <td><p>:</p></td>
+            <td>
+              <p class="valuePrint" id="adminChargePrint">...</p>
+            </td>
+        </tr>
+        <tr>
+          <td><hr class="midInfoHR"></td>
+        </tr>
+        <tr>
+            <td>
+              <h4> Vat(5%) </h4>
+            </td>
+            <td><p>:</p></td>
+            <td>
+              <p class="valuePrint" id="vatPrint1"></p>
+            </td>
+        </tr>
+      </table>
+        <hr>
+      <table>
+        <tr>
+            <td>
+              <h4> Total (excluding VAT) </h4>
+            </td>
+            <td><p>:</p></td>
+            <td>
+              <p class="valuePrint" id="totalNoVATPrint">...</p>
+            </td>
+        </tr>
+        <tr>
+          <td><hr class="midInfoHR"></td>
+        </tr>
+        <tr>
+            <td>
+              <h4> Total Vat </h4>
+            </td>
+            <td><p>:</p></td>
+            <td>
+              <p class="valuePrint" id="vatPrint2">...</p>
+            </td>
+        </tr>
+        <tr>
+          <td><hr class="midInfoHR"></td>
+        </tr>
+        <tr>
+            <td>
+              <h4> Total (including VAT) </h4>
+            </td>
+            <td><p>:</p></td>
+            <td>
+              <p class="valuePrint" id="finalTotalPrint">...</p>
+            </td>
+        </tr>
+      </table>
+      </div>
+    </div>
+    <hr id="hr5">
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <button type="button" id="determinedBtn" class="btn btn-outline-dark">Difficulty Seeing?</button>
+    </div>
+    <div class="mainOutputs">
+    <script>
+      // Variable and Values Creations
+      var difView = "False";
+      const unitPrice = 0.5;
+      const adminCharge = 10;
+      var numPeople = +prompt("Please enter number of people who need their bills.", "Sorry, but the format won't look as neat :(");
+      //for loop
+        for (var i=1;i<=numPeople;i++) {
+          document.write("<br>")
+          document.write("Customer " + i + ": <br>");
+          document.write("<br>");
+          var cusCode = prompt("Please enter your code.");
+          document.write("Code: " + cusCode + "<br>");
+          var cusName = prompt("Please enter your good name.");
+          document.write("Name: " + cusName + "<br>");
+          var address = prompt("Please enter your address.");
+          document.write("Address: " + address + "<br>");
+          var prevMetRead = +prompt("Please enter your previous meter reading.");
+          document.write("Previous reading: " + prevMetRead + "<br>");
+          var curMetRead = +prompt("Please enter your current meter reading.");
+          document.write("Current reading: " + curMetRead + "<br>");
+          var unitsConsumed = curMetRead - prevMetRead
+          document.write("Units Price: " + unitPrice + "<br>");
+          document.write("Units Consumed: " + unitsConsumed + "<br>");
+          var amount = unitPrice * unitsConsumed;
+          document.write("Amount: " + amount + "<br>");
+          document.write("Admin Charges: " + adminCharge + "<br>");
+          var totalNoVAT = amount + adminCharge;
+          var vat = 0.05 * totalNoVAT;
+          document.write("Vat(5%): " + vat + "<br>");
+          var finalTotal = totalNoVAT + vat;
+          document.write("Total (excluding VAT): " + totalNoVAT + "<br>");
+          document.write("Total VAT: " + vat + "<br>");
+          document.write("Total (including VAT): " + finalTotal + "<br>");
+        }
+      // Printing the user details
+      document.querySelector("#cusCodePrint").innerText = cusCode;
+      document.querySelector("#cusNamePrint").innerText = cusName;
+      document.querySelector("#addressPrint").innerText = address;
+      // Printing the bill details
+      document.querySelector("#prevReadPrint").innerText = prevMetRead;
+      document.querySelector("#curReadPrint").innerText = curMetRead;
+      document.querySelector("#unitConsumePrint").innerText = unitsConsumed;
+      document.querySelector("#unitPricePrint").innerText = unitPrice;
+      document.querySelector("#amountPrint").innerText = amount + " Dhs.";
+      // Printing the constant values
+      document.querySelector("#adminChargePrint").innerText = adminCharge + "Dhs.";
+      document.querySelector("#vatPrint1").innerText = Math.round(vat) + "Dhs.";
+      // Printing the final values
+      document.querySelector("#totalNoVATPrint").innerText = Math.round(totalNoVAT) + "Dhs";
+      document.querySelector("#vatPrint2").innerText = Math.round(vat) + "Dhs";
+      document.querySelector("#finalTotalPrint").innerText = Math.round(finalTotal) + "Dhs";
+      document.getElementById("determinedBtn").addEventListener("click", difficultySeeing);
+      function difficultySeeing() {
+        if (difView == "False") {
+          document.body.style.backgroundColor = "white";
+          document.getElementById("headingg").style.color = "black";
+          difView = "True";
+        }
+        else if (difView == "True") {
+          document.body.style.backgroundColor = "#F1AC88FF";
+          document.getElementById("headingg").style.color = "#FC766AFF";
+          difView = "False";
+        }
+      }
+    </script>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <button type="button" id="moreEmployee" class="btn btn-outline-light">More Employees?</button>
+    </div>
+  </div>
+    <p>
+
+
+
+    </p>
+  </body>
+</html>

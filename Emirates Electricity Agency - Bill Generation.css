@@ -1,0 +1,75 @@
+body {
+  background-color: #F1AC88FF;
+}
+
+.heading {
+  text-align: center;
+  color: #FC766AFF;
+  font-weight: bolder;
+  font-size: 200%;
+  margin-bottom: 0;
+  font-family: 'Quintessential', cursive;
+}
+
+.mainOutputs {
+  font-weight: 600;
+  color: #783937FF;
+  font-size: 125%;
+  font-family: 'Playball', cursive;
+}
+
+hr {
+  border: dashed 1px #DA291CFF;
+}
+
+
+/* F1AC88FF
+   783937FF
+   FC766AFF
+   DA291CFF
+*/
+
+.difSee {
+  color: black;
+}
+
+.logo {
+  width: 7.5%;
+  margin-left: 75%;
+  border-radius: 50%;
+}
+#finalTotalPrint {
+  font-size: 150%;
+}
+
+.valuePrint {
+  padding-left: 50%;
+}
+
+.midInfoHR {
+  opacity: 0.5;
+}
+
+.electricityImg {
+  width: 10%;
+  margin-right: 75%;
+  margin-left: 5%;
+}
+
+.mainLatestOP {
+  text-align: center;
+}
+
+.catchPhrase {
+  color: #e85f66;
+  font-weight: bolder;
+  margin-bottom: 0;
+  position: relative;
+  animation: mymove 5s infinite;
+  animation-timing-function: ease-in;
+}
+
+@keyframes mymove {
+  from {left: 0;}
+  to {left: 1000px;}
+}
